@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiny Pradeep Gunti | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('vehicle.jpg') center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 60px 10%;
+}
+
+h2 {
+    color: #0b3d91;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    background: #0b3d91;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b3d91;
+    color: white;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>Shiny Pradeep Gunti</h1>
+        <p>Advisor – Women & Child Development & Police Department</p>
+        <p><strong>From Bidar to Karnataka – A Model for Women Safety</strong></p>
+    </div>
+</header>
+
+<section class="fade-in">
+    <h2>About</h2>
+    <div class="card">
+        <p>
+        Shiny Pradeep Gunti is a dedicated advisor working with Women & Child Development and Police Department.
+        She played a key role in initiating the Akka Pade program at district level in Bidar,
+        which later expanded across Karnataka due to its success and impact.
+        </p>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Statewide Impact</h2>
+    <div class="stats">
+        <div class="stat">📍 Started in Bidar</div>
+        <div class="stat">🌍 Expanded to Karnataka</div>
+        <div class="stat">👩‍🦰 Women Safety Focus</div>
+        <div class="stat">🤝 WCD + Police</div>
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>Government Support</h2>
+    <div class="card">
+        <p>
+        The Government strengthened the Akka Pade initiative by providing dedicated Bolero vehicles
+        for each district along with a trained 4-member team. This ensures rapid response and effective
+        field-level support for women and children across Karnataka.
+        </p>
+        <img src="vehicle.jpg" alt="Akka Pade Vehicle">
+    </div>
+</section>
+
+<section class="fade-in">
+    <h2>From One District to Entire State</h2>
+    <div class="card">
+        <p>
+        The Akka Pade initiative started in Bidar as a focused effort to support women and children.
+        Due to its success, it received recognition from government leadership and expanded across Karnataka.
+        Today, it serves as a strong model for community policing and women empowerment.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Shiny Pradeep Gunti | Public Service Portfolio</p>
+</footer>
+
+</body>
+</html>
