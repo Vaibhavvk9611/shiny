@@ -3,158 +3,439 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shiny Pradeep Gunti | Portfolio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
-    color: #333;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('vehicle.jpg') center/cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 50px;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
+/* HEADER */
+
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('vehicle.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
 }
 
-header p {
-    font-size: 20px;
-    margin-top: 10px;
+.hero{
+    max-width:900px;
+    animation:fadeIn 1.5s ease;
 }
 
-section {
-    padding: 60px 10%;
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+    font-weight:700;
 }
 
-h2 {
-    color: #0b3d91;
-    margin-bottom: 20px;
+.hero p{
+    font-size:22px;
+    line-height:1.8;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.hero-btn{
+    margin-top:30px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.hero-btn a{
+    text-decoration:none;
+    background:#0b3d91;
+    color:white;
+    padding:14px 35px;
+    border-radius:50px;
+    font-size:18px;
+    transition:0.3s;
 }
 
-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
+.hero-btn a:hover{
+    background:#1456c2;
 }
 
-.stats {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+/* SECTION */
+
+section{
+    padding:80px 10%;
 }
 
-.stat {
-    flex: 1;
-    background: #0b3d91;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+.section-title{
+    text-align:center;
+    font-size:38px;
+    color:#0b3d91;
+    margin-bottom:50px;
+    font-weight:700;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0b3d91;
-    color: white;
+/* CARD */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-/* Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1s forwards;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+.card p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat{
+    background:#0b3d91;
+    color:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.stat:hover{
+    transform:scale(1.03);
+}
+
+.stat h3{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:18px;
+}
+
+/* IMAGE SECTION */
+
+.image-box img{
+    width:100%;
+    border-radius:20px;
+    margin-top:25px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-8px);
+}
+
+.gallery-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.gallery-card p{
+    padding:18px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#0b3d91;
+    color:white;
+    border-radius:25px;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.contact h2{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.contact p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061d46;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+/* ANIMATION */
+
+.fade{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-    <div>
-        <h1>Shiny Pradeep Gunti</h1>
-        <p>Advisor – Women & Child Development & Police Department</p>
-        <p><strong>From Bidar to Karnataka – A Model for Women Safety</strong></p>
-    </div>
+
+<div class="hero">
+
+<h1>Shiny Pradeep Gunti</h1>
+
+<p>
+Advisor – Women & Child Development & Police Department
+</p>
+
+<p>
+From Bidar to Karnataka – Building a Strong Model for Women Safety & Empowerment
+</p>
+
+<div class="hero-btn">
+<a href="#about">Explore More</a>
+</div>
+
+</div>
+
 </header>
 
-<section class="fade-in">
-    <h2>About</h2>
-    <div class="card">
-        <p>
-        Shiny Pradeep Gunti is a dedicated advisor working with Women & Child Development and Police Department.
-        She played a key role in initiating the Akka Pade program at district level in Bidar,
-        which later expanded across Karnataka due to its success and impact.
-        </p>
-    </div>
+<!-- ABOUT -->
+
+<section id="about" class="fade">
+
+<h2 class="section-title">About</h2>
+
+<div class="card">
+
+<p>
+Shiny Pradeep Gunti is a dedicated advisor working with the Women & Child Development Department and Police Department.
+She played a key role in initiating the Akkapade program in Bidar district, which later expanded across Karnataka due to its impactful work in women safety, child protection, and public support systems.
+</p>
+
+</div>
+
 </section>
 
-<section class="fade-in">
-    <h2>Statewide Impact</h2>
-    <div class="stats">
-        <div class="stat">📍 Started in Bidar</div>
-        <div class="stat">🌍 Expanded to Karnataka</div>
-        <div class="stat">👩‍🦰 Women Safety Focus</div>
-        <div class="stat">🤝 WCD + Police</div>
-    </div>
+<!-- IMPACT -->
+
+<section class="fade">
+
+<h2 class="section-title">Statewide Impact</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>31+</h3>
+<p>District Reach</p>
+</div>
+
+<div class="stat">
+<h3>1000+</h3>
+<p>Women Supported</p>
+</div>
+
+<div class="stat">
+<h3>24/7</h3>
+<p>Field Support</p>
+</div>
+
+<div class="stat">
+<h3>Govt</h3>
+<p>Supported Initiative</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="fade-in">
-    <h2>Government Support</h2>
-    <div class="card">
-        <p>
-        The Government strengthened the Akka Pade initiative by providing dedicated Bolero vehicles
-        for each district along with a trained 4-member team. This ensures rapid response and effective
-        field-level support for women and children across Karnataka.
-        </p>
-        <img src="vehicle.jpg" alt="Akka Pade Vehicle">
-    </div>
+<!-- GOVERNMENT SUPPORT -->
+
+<section class="fade">
+
+<h2 class="section-title">Government Support</h2>
+
+<div class="card image-box">
+
+<p>
+The Government strengthened the Akkapade initiative by providing dedicated Bolero vehicles for every district along with trained field teams.
+This initiative helps in rapid response, women protection, awareness programs, and public safety support across Karnataka.
+</p>
+
+<img src="vehicle.jpg" alt="Akkapade Vehicle">
+
+</div>
+
 </section>
 
-<section class="fade-in">
-    <h2>From One District to Entire State</h2>
-    <div class="card">
-        <p>
-        The Akka Pade initiative started in Bidar as a focused effort to support women and children.
-        Due to its success, it received recognition from government leadership and expanded across Karnataka.
-        Today, it serves as a strong model for community policing and women empowerment.
-        </p>
-    </div>
+<!-- JOURNEY -->
+
+<section class="fade">
+
+<h2 class="section-title">From One District to Entire State</h2>
+
+<div class="card">
+
+<p>
+The initiative first started in Bidar district and quickly gained recognition because of its successful field operations and women safety programs.
+Due to strong public response and government appreciation, the model expanded across Karnataka and became a major support system for women and children.
+</p>
+
+</div>
+
 </section>
+
+<!-- GALLERY -->
+
+<section class="fade">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-card">
+<img src="event1.jpg" alt="">
+<p>Women Safety Awareness Program</p>
+</div>
+
+<div class="gallery-card">
+<img src="event2.jpg" alt="">
+<p>District Field Visit</p>
+</div>
+
+<div class="gallery-card">
+<img src="event3.jpg" alt="">
+<p>Akkapade Team Coordination</p>
+</div>
+
+<div class="gallery-card">
+<img src="event4.jpg" alt="">
+<p>Government Event & Support</p>
+</div>
+
+<div class="gallery-card">
+<img src="event5.jpg" alt="">
+<p>Women Empowerment Activities</p>
+</div>
+
+<div class="gallery-card">
+<img src="event6.jpg" alt="">
+<p>Public Service & Outreach</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="fade">
+
+<div class="contact">
+
+<h2>Contact</h2>
+
+<p>Email: support@akkapade.org</p>
+
+<p>Karnataka, India</p>
+
+<p>Women & Child Development | Police Department</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-    <p>© 2026 Shiny Pradeep Gunti | Public Service Portfolio</p>
+
+<p>
+© 2026 Shiny Pradeep Gunti | Public Service Portfolio
+</p>
+
 </footer>
 
 </body>
